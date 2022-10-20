@@ -23,6 +23,7 @@ function car_right () {
     mecanumRobot.Motor(LR.Lower_right, MD.Back, 35)
 }
 basic.showIcon(IconNames.Happy)
+mecanumRobot.setServo(80)
 irRemote.connectInfrared(DigitalPin.P9)
 let Temp = 0
 let Input = 0
