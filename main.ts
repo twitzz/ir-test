@@ -36,22 +36,50 @@ basic.forever(function () {
         strip.show()
         strip.clear()
         car_forward()
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # . # . #
+            . . # . .
+            . . # . .
+            `)
         mecanumRobot.setLed(LedCount.Left, LedState.ON)
         mecanumRobot.setLed(LedCount.Right, LedState.ON)
     } else if (Input == 68) {
         strip.show()
         strip.clear()
         car_left()
+        basic.showLeds(`
+            . . # . .
+            . . . # .
+            # # # # #
+            . . . # .
+            . . # . .
+            `)
         mecanumRobot.setLed(LedCount.Left, LedState.ON)
         mecanumRobot.setLed(LedCount.Right, LedState.OFF)
     } else if (Input == 67) {
         strip.show()
         strip.clear()
         car_right()
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
+            . . # . .
+            `)
         mecanumRobot.setLed(LedCount.Left, LedState.OFF)
         mecanumRobot.setLed(LedCount.Right, LedState.ON)
     } else if (Input == 21) {
         car_backward()
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . # . # .
+            # . . . #
+            `)
         mecanumRobot.setLed(LedCount.Left, LedState.OFF)
         mecanumRobot.setLed(LedCount.Right, LedState.OFF)
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
